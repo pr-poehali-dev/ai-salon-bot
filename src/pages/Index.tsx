@@ -92,88 +92,60 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="max-w-4xl mx-auto">
             <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Bot" size={32} className="text-blue-600" />
+                <div className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Bot" size={40} className="text-blue-600" />
                 </div>
-                <CardTitle className="text-xl">Администратор салона</CardTitle>
-                <CardDescription>
-                  ИИ-помощник для управления записями и расписанием
+                <CardTitle className="text-2xl mb-2">AI-Администратор салона</CardTitle>
+                <CardDescription className="text-lg">
+                  Умный помощник для полной автоматизации записи клиентов и управления расписанием
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Автоматическая запись клиентов</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Управление расписанием мастеров</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Напоминания клиентам</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Filter" size={32} className="text-green-600" />
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Clock" size={20} className="text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">24/7 работа</h4>
+                        <p className="text-sm text-gray-600">Без выходных и перерывов</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="TrendingUp" size={20} className="text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Рост конверсии в запись на 20%+</h4>
+                        <p className="text-sm text-gray-600">Автоматическая запись и напоминания</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Database" size={20} className="text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Интеграция с CRM для записи</h4>
+                        <p className="text-sm text-gray-600">Простой обмен данными</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="UserMinus" size={20} className="text-orange-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Снижение нагрузки</h4>
+                        <p className="text-sm text-gray-600">Перенос рутины на AI</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <CardTitle className="text-xl">Квалификация заявок</CardTitle>
-                <CardDescription>
-                  Бот для обработки заявок с сайта и CRM-интеграции
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Автоматическая квалификация</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Интеграция с CRM</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Распределение по менеджерам</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Icon name="BarChart3" size={32} className="text-purple-600" />
-                </div>
-                <CardTitle className="text-xl">Аналитика и отчеты</CardTitle>
-                <CardDescription>
-                  Умная аналитика для оптимизации бизнес-процессов
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Анализ эффективности</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Прогнозирование загрузки</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Детальные отчеты</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
           </div>
@@ -186,20 +158,20 @@ const Index = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
-                    <div className="text-sm text-gray-600">Экономия времени администратора</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                    <div className="text-sm text-gray-600">Работа без перерывов</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">60%</div>
-                    <div className="text-sm text-gray-600">Снижение пропущенных записей</div>
+                    <div className="text-3xl font-bold text-green-600 mb-2">20%+</div>
+                    <div className="text-sm text-gray-600">Рост конверсии в запись</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">40%</div>
-                    <div className="text-sm text-gray-600">Рост конверсии заявок</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
+                    <div className="text-sm text-gray-600">CRM интеграция</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-                    <div className="text-sm text-gray-600">Прием заявок</div>
+                    <div className="text-3xl font-bold text-orange-600 mb-2">0</div>
+                    <div className="text-sm text-gray-600">Пропущенных звонков</div>
                   </div>
                 </div>
               </div>
@@ -249,7 +221,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Базовая аналитика</span>
+                    <span>Основные функции</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
@@ -285,7 +257,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Расширенная аналитика</span>
+                    <span>Расширенные функции</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
@@ -322,7 +294,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
-                    <span>Продвинутая аналитика</span>
+                    <span>Все функции</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-green-500" />
@@ -471,8 +443,8 @@ const Index = () => {
             <div className="space-y-4">
               <h4 className="font-semibold">Решения</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Администратор салона</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Квалификация заявок</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">AI-Администратор</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Автоматизация записи</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">CRM-интеграция</a></li>
               </ul>
             </div>
